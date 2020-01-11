@@ -1,0 +1,8 @@
+<div>
+    <h4>Quotes</h4>
+    <div *ngFor='let quote of quotes'>
+        <p>{{quote.quotation}}</p>
+        <span>{{quote.author}}</span>
+        <app-quote-display [quote]='quote'></app-quote-display>
+    </div>
+</div>
