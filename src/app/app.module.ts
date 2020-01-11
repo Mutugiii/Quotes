@@ -7,6 +7,10 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDisplayComponent } from './quote-display/quote-display.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
+import { HighlighterDirective } from './highlighter.directive';
+import { TimeCountPipe } from './time-count.pipe';
+import { VoteComponent } from './vote/vote.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { BodyComponent } from './body/body.component';
     QuoteComponent,
     QuoteDisplayComponent,
     HeaderComponent,
-    BodyComponent
+    BodyComponent,
+    HighlighterDirective,
+    TimeCountPipe,
+    VoteComponent,
+    QuoteFormComponent
   ],
   imports: [
     BrowserModule,

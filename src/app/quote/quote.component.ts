@@ -9,10 +9,20 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote('All is well that ends well','Mark Twain','Mutugi'),
-    new Quote('All is ends well','Mark Twain','Mutu'),
-    new Quote('All is well that ends','Mark Twain','tugi')
+    new Quote(0, 0, 'All is well that ends well','Mark Twain','Mutugi', new Date(2019,5,3)),
+    new Quote(0, 0, 'All is ends well','Mark Twain','Mutu', new Date(2019,12,1)),
+    new Quote(0, 0, 'All is well that ends','Mark Twain','tugi', new Date(2019,1,7))
   ]
+
+  showDetails(index){
+    this.quotes[index].showMore = !this.quotes[index].showMore;
+  }
+
+  deleteQuote(toDelete, index) {
+    if(toDelete) {
+      this.quotes.splice(index, 1)
+    }
+  }
   
   constructor() { }
 

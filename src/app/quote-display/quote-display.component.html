@@ -1,4 +1,7 @@
 <div>       
-    <span>{{quote.submitter}}</span>
+    <app-vote *ngIf='quote.uVote && quote.dVote' [quote]='quote'></app-vote>
+    <span>Submitted by {{quote.submitter}}: published {{quote.submitTime | timeCount}}</span>
     <!-- <span>{{quote.vote}}</span> -->
+    <br>
+    <span (click)="quoteDelete(true)">Delete Quote</span>
 </div>
