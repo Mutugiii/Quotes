@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h5 class="text-center">You got <span id="jokes">Jokes</span> Quotes</h5>
     <hr>
-    <form #quoteForm='ngForm' >
+    <form (ngSubmit)='submitQuote(quoteForm.value)' #quoteForm='ngForm'>
         <div class="form-group">
   
             <label for="name">Name</label>
@@ -32,6 +32,6 @@
                 <div>Author name is required</div>
             </div>  
         </div>
-        <button type='submit' class="btn btn-primary">Submit Quote</button>
+        <button type='submit' id='submitButton' class="btn btn-primary">Submit Quote</button>
     </form>
   </div>
