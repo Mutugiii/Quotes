@@ -1,23 +1,37 @@
 <div class="container-fluid">
     <h5 class="text-center">You got <span id="jokes">Jokes</span> Quotes</h5>
     <hr>
-    <form>
+    <form #quoteForm='ngForm' >
         <div class="form-group">
   
             <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name">
-  
+            <input type="text" required class="form-control" [(ngModel)]='newQuote.submitter' name="name" #name='ngModel'>
+            <br>    
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <div>Name is required</div>
+            </div>  
         </div>
         <div class="form-group">
   
-            <label for="description">Quote</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
-  
+            <label for="quotation">Quote</label>
+            <textarea class="form-control" rows="4" required minlength="12" [(ngModel)]='newQuote.quotation' name="quotation" #quotation='ngModel' ></textarea>
+            <br>
+            <div *ngIf="quotation.invalid && (quotation.dirty || quotation.touched)" class="alert alert-danger">
+                <div *ngIf="quotation.errors.minlength">
+                    The quote must be longer than 12 characters
+                </div>
+
+                <div *ngIf="quotation.errors.required">The Quote is required</div>
+            </div>  
         </div>
         <div class="form-group">
             <label for="Author">Author</label>
-            <input type="text" required class="form-control" id="author">
-  
+            <input type="text" required class="form-control" [(ngModel)]='newQuote.author' name="author" #author='ngModel'>
+            <br>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <div>Author name is required</div>
+            </div>  
         </div>
+        <button type='submit' class="btn btn-primary">Submit Quote</button>
     </form>
   </div>
