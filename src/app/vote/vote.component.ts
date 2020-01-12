@@ -10,12 +10,14 @@ import { EventEmitter } from 'protractor';
 export class VoteComponent implements OnInit {
   @Input() quote:Quote;
   // @Output() updateVotes = new EventEmitter<number>();
+  uVote = 0;
+  dVote = 0;
 
   upVote(){
-    this.quote.uVote = this.quote.uVote + 1;
+    this.uVote = this.uVote + 1;
   }
   downVote(){
-    this.quote.dVote = this.quote.dVote + 1;
+    this.dVote = this.dVote + 1;
   }
   constructor() { }
 
