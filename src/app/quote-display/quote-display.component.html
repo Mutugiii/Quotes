@@ -1,7 +1,10 @@
 <div>       
-    <app-vote *ngIf='quote.uVote && quote.dVote' [quote]='quote'></app-vote>
     <span>Submitted by {{quote.submitter}}: published {{quote.submitTime | timeCount}}</span>
     <!-- <span>{{quote.vote}}</span> -->
     <br>
-    <span (click)="quoteDelete(true)">Delete Quote</span>
+    <br>
+    <div class="row">
+        <app-vote  class="col-md-6"></app-vote>
+        <span class="col-md-6" (click)="quoteDelete(true)"><i class="fas fa-trash-alt"></i></span>
+    </div>
 </div>
