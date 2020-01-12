@@ -32,6 +32,9 @@
                 <div>Author name is required</div>
             </div>  
         </div>
-        <button type='submit' id='submitButton' class="btn btn-primary">Submit Quote</button>
+        <div *ngIf="!quoteForm.valid" class="alert alert-primary">
+            <div>Please fill in the form with correct inputs before submitting</div>
+        </div>
+        <button type='submit' id='submitButton' class="btn btn-primary" (click)='clearForm()' [disabled]="!quoteForm.valid">Submit Quote</button>
     </form>
   </div>

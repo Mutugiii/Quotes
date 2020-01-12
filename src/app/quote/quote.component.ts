@@ -9,9 +9,9 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(0, 0, 'All is well that ends well','Mark Twain','Mutugi', new Date(2019,5,3)),
-    new Quote(0, 0, 'All is ends well','Mark Twain','Mutu', new Date(2019,12,1)),
-    new Quote(0, 0, 'All is well that ends','Mark Twain','tugi', new Date(2019,1,7))
+    new Quote(0, 0, 'Coding is Life','Geek Tutor','Admin', new Date(2019,5,3)),
+    new Quote(0, 0, 'Hakuna stage ya Kumi','Kenya Matwana','M3 Route', new Date(2019,12,1)),
+    new Quote(0, 0, 'Vijana tuache Mihadarati','Stivo Simple Boy','KOT', new Date(2019,1,7))
   ]
 
   showDetails(index){
@@ -20,7 +20,11 @@ export class QuoteComponent implements OnInit {
 
   deleteQuote(toDelete, index) {
     if(toDelete) {
-      this.quotes.splice(index, 1)
+      let deleteQuote = confirm(`Are you sure you wish to delete the quote by ${this.quotes[index].submitter}`)
+      
+      if(deleteQuote){
+        this.quotes.splice(index, 1)
+      }
     }
   }
 

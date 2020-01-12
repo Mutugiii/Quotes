@@ -1,5 +1,6 @@
 <div class="row">
-    <span class="col-md-3" (click)='upVote()'><i class="far fa-thumbs-up">{{uVote}}</i></span>
+    <a> <span class="col-md-3" (click)='upVote()' ngbPopover="Upvote the quote" placement="top-left" triggers="mouseenter:mouseleave"><i class="far fa-thumbs-up">{{uVote}}</i></span></a>
     <span class="col-md-1"></span>
-    <span class="col-md-3" (click)='downVote()'><i class="far fa-thumbs-down">{{dVote}}</i></span>
-</div>
+    <a><span class="col-md-3" (click)='downVote()' ngbPopover="Downvote the quote" placement="top-left" triggers="mouseenter:mouseleave"><i class="far fa-thumbs-down">{{dVote}}</i></span></a>
+</div> 
+<div *ngIf='uVote'></div>

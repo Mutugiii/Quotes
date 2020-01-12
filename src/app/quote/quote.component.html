@@ -6,7 +6,7 @@
                 <div>
                     {{quote.quotation}} <br>
                     <div class="row">
-                        <span class="col-md-6" (click)='showDetails(i)'>.....</span>  
+                       <a><span class="col-md-6" (click)='showDetails(i)' ngbPopover="Toggle description" placement="top-left" triggers="mouseenter:mouseleave"><i class="far fa-caret-square-down"></i></span></a>
                         <span class="text-primary col-md-6">{{quote.author}}</span>
                     </div>
                 </div>

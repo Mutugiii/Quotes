@@ -5,6 +5,6 @@
     <br>
     <div class="row">
         <app-vote  class="col-md-6"></app-vote>
-        <span class="col-md-6" (click)="quoteDelete(true)"><i class="fas fa-trash-alt"></i></span>
+        <a><span class="col-md-6" (click)="quoteDelete(true)" ngbPopover="Delete the quote" placement="top-left" triggers="mouseenter:mouseleave"><i class="fas fa-trash-alt"></i></span></a>
     </div>
 </div>

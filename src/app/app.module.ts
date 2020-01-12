@@ -14,6 +14,7 @@ import { VoteComponent } from './vote/vote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderBodyComponent } from './header-body/header-body.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HeaderBodyComponent } from './header-body/header-body.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
