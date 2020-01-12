@@ -1,0 +1,27 @@
+
+.intro {
+    background-image: url('../../assets/cover.jpg');
+    height: 660px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .navbar {
+    padding: 15px 10px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-scroll {
+    background: dimgrey !important;
+  }
+
+  .navbar-inverse{
+      background-color: white;
+  }
