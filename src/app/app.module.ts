@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { HighlighterDirective } from './highlighter.directive';
 import { TimeCountPipe } from './time-count.pipe';
 import { VoteComponent } from './vote/vote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HeaderBodyComponent } from './header-body/header-body.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     HighlighterDirective,
     TimeCountPipe,
     VoteComponent,
-    QuoteFormComponent
+    QuoteFormComponent,
+    NavbarComponent,
+    HeaderBodyComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
