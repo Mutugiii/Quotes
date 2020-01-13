@@ -1,4 +1,4 @@
-[![codebeat badge](https://codebeat.co/badges/868893ee-cad9-4538-a1a0-c05726a3ef93)](https://codebeat.co/projects/github-com-mutugiii-quotes-master)
+[![codebeat badge](https://codebeat.co/badges/8ab3e002-8f50-4e7c-9ab2-f8c5823b78a1)](https://codebeat.co/projects/github-com-mutugiii-quotes-master)
 # Quotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14
