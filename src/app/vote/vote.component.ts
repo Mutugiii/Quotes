@@ -16,9 +16,7 @@ export class VoteComponent implements OnInit {
   upVote(){
     this.uVote = this.uVote + 1;   
     let data = localStorage.getItem('test-data')
-    let parsedData = JSON.parse(localStorage.getItem('arr'))
-    console.log(data) 
-    console.log(parsedData)
+  
   }
 
   downVote(){

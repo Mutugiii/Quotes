@@ -27,16 +27,4 @@ export class QuoteFormComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  persistData = () => {
-   if(this.data != "") {
-      localStorage.setItem('test-data', this.data)
-   }
-   let persistedArr = [
-     {'name': 'Henry', 'role': 'Technical Mentor'},
-     {'name': 'Bill', 'role': 'Awesome student'},
-    ]
-
-    localStorage.setItem('arr', JSON.stringify(persistedArr));
-  }
 }
