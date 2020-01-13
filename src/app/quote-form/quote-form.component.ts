@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, ViewChild, HostListener } from '@angular/core';
 import { Quote } from '../quote';
+import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-quote-form',
@@ -10,6 +11,9 @@ export class QuoteFormComponent implements OnInit {
   @ViewChild('quoteForm',  {static: true}) formValues;
   newQuote = new Quote('','','', new Date())
   @Output() addQuote = new EventEmitter<Quote>();
+  
+  data: string = ""
+
 
   submitQuote(){
     this.addQuote.emit(this.newQuote);
@@ -24,4 +28,15 @@ export class QuoteFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  persistData = () => {
+   if(this.data != "") {
+      localStorage.setItem('test-data', this.data)
+   }
+   let persistedArr = [
+     {'name': 'Henry', 'role': 'Technical Mentor'},
+     {'name': 'Bill', 'role': 'Awesome student'},
+    ]
+
+    localStorage.setItem('arr', JSON.stringify(persistedArr));
+  }
 }

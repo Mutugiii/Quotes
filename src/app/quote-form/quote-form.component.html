@@ -37,4 +37,8 @@
         </div>
         <button type='submit' id='submitButton' class="btn btn-primary" (click)='clearForm()' [disabled]="!quoteForm.valid">Submit Quote</button>
     </form>
+
+    <hr>
+    <input type="text" placeholder="Enter something" [(ngModel)]= 'data'/>
+    <button class="btn btn-large" (click) = 'persistData()'>Persist data</button>
   </div>
