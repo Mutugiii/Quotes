@@ -4,17 +4,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
   selector: '[appHighlighter]'
 })
 export class HighlighterDirective {  
-  constructor(private element: ElementRef) { }
-
-  @HostListener('click') onClicks(){
-    this.textHighlighter('yellow')
-  }
-
-  @HostListener('dblclick') onDoubleClicks(){
-    this.textHighlighter(null)
-  }
-
-  textHighlighter(action: string){
-    this.element.nativeElement.style.backgroundColor = action;
+  constructor(private element: ElementRef) { 
+    this.element.nativeElement.style.backgroundColor = 'blue';
   }
 }
