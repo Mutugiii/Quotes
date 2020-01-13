@@ -8,16 +8,14 @@ import { Quote } from '../quote';
 })
 export class QuoteFormComponent implements OnInit {
   @ViewChild('quoteForm',  {static: true}) formValues;
-  newQuote = new Quote(0,0,'','','', new Date())
+  newQuote = new Quote('','','', new Date())
   @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote(){
     this.addQuote.emit(this.newQuote);
+    this.newQuote = new Quote('','','', new Date())
+    this.formValues.resetForm()
   }
-  // @HostListener('click') onClicks(){
-  //   event = this.formValues.resetForm()
-  //   this.clearForm(event)
-  // }
   clearForm(action){
     action
   }
